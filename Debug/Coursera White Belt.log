@@ -1,0 +1,3 @@
+﻿  Coursera White Belt.cpp
+C:\Users\chief\source\repos\Coursera White Belt\Coursera White Belt.cpp(13,5): error C2561: AskTimeServer: функция должна возвращать значение
+C:\Users\chief\source\repos\Coursera White Belt\Coursera White Belt.cpp(6): message : см. объявление "AskTimeServer"
