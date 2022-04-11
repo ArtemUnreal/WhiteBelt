@@ -20,8 +20,18 @@ private:
     int year, month, day;
 };
 
+
 bool operator<(const Date& lhs, const Date& rhs) {
-    return (lhs - rhs).GetYear() < 0;
+    if (lhs.GetYear() == rhs.GetYear()) {
+        if (lhs.GetMonth() == rhs.GetMonth()) {
+            return lhs.GetDay() < rhs.GetDay();
+        }
+        else {
+            return lhs.GetMonth() < rhs.GetMonth();
+        }
+    }
+    
+    return lhs.GetYear() < rhs.GetYear();
 }
 
 class Database {
