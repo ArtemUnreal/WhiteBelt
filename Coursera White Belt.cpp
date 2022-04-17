@@ -8,6 +8,11 @@ using namespace std;
 
 class Date {
 public:
+    Date(const int& Year, const int& Month, const int& Day) {
+        year = Year;
+        month = Month;
+        day = Day;
+    }
     int GetYear() const {
         return year;
     }
@@ -22,7 +27,6 @@ private:
     int year, month, day;
 };
 
-
 bool operator<(const Date& lhs, const Date& rhs) {
     if (lhs.GetYear() == rhs.GetYear()) {
         if (lhs.GetMonth() == rhs.GetMonth()) {
@@ -34,6 +38,23 @@ bool operator<(const Date& lhs, const Date& rhs) {
     }
     
     return lhs.GetYear() < rhs.GetYear();
+}
+
+istream& operator >>(istream& stream, Date& date) {
+    int d, m, y;
+    char c;
+
+    if (stream) {
+        stream >> d >> c >> m >> c >> y;
+        if (stream) {
+            if (c == '-') {
+                date = Date(d, m, y);
+            }
+            else {
+                stream.setstate(ios_base::failbit);
+            }
+        }
+    }
 }
 
 class Database {
@@ -58,7 +79,20 @@ public:
     }
 
     int  DeleteDate(const Date& date) {
-        cin >> date;
+        int d, m, y;
+        char c;
+
+
+        cin >> d >> c >> m >> c >> y;
+
+        if (c == '-') {
+            d = date.GetDay();
+            m = date.GetMonth();
+            y = date.GetYear();
+        }
+        else {
+
+        }
     }
 
     /* ??? */ Find(const Date& date) const;
@@ -69,14 +103,25 @@ private:
     map <string, set <Date>> date_event;
     set <Date> new_date;
     string operation_word;
-    set <Date> date_for_del;
+    
 };
 
 int main() {
     Database db;
+    Date date {0, 0 ,0};
 
     string command;
     while (getline(cin, command)) {
+        if (command == "Add") {
+            cin >> date;
+            string event;
+            db.AddEvent(date, event);
+        }
+        else if (command == "Del") {
+            cin >> date;
+            string event;
+            db.DeleteEvent(date, event);
+        } 
         // —читайте команды с потока ввода и обработайте каждую
     }
 

@@ -1,3 +1,23 @@
 ﻿  Coursera White Belt.cpp
-C:\Users\chief\source\repos\Coursera White Belt\Coursera White Belt.cpp(13,5): error C2561: AskTimeServer: функция должна возвращать значение
-C:\Users\chief\source\repos\Coursera White Belt\Coursera White Belt.cpp(6): message : см. объявление "AskTimeServer"
+C:\Users\chief\source\repos\CourseraWhiteBelt\Coursera White Belt.cpp(76,43): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\chief\source\repos\CourseraWhiteBelt\Coursera White Belt.cpp(76,43): warning C4183: Find: отсутствие возвращаемого типа; предполагается функция-член, возвращающая "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xutility(4646,14): error C2672: "operator __surrogate_func": не найдена соответствующая перегруженная функция
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xutility(4663): message : выполняется компиляция ссылки на экземпляр шаблон функции "bool std::equal<_InIt1,_InIt2,std::equal_to<void>>(const _InIt1,const _InIt1,const _InIt2,_Pr)"
+          with
+          [
+              _InIt1=std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tree_simple_types<Date>>,std::_Iterator_base0>,
+              _InIt2=std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tree_simple_types<Date>>,std::_Iterator_base0>,
+              _Pr=std::equal_to<void>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\set(178): message : выполняется компиляция ссылки на экземпляр шаблон функции "bool std::equal<std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tree_simple_types<Date>>,std::_Iterator_base0>,std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tree_simple_types<Date>>,std::_Iterator_base0>>(const _InIt1,const _InIt1,const _InIt2)"
+          with
+          [
+              _InIt1=std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tree_simple_types<Date>>,std::_Iterator_base0>,
+              _InIt2=std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tree_simple_types<Date>>,std::_Iterator_base0>
+          ]
+C:\Users\chief\source\repos\CourseraWhiteBelt\Coursera White Belt.cpp(48): message : выполняется компиляция ссылки на экземпляр шаблон функции "bool std::operator ==<Date,std::less<Date>,std::allocator<Date>>(const std::set<Date,std::less<Date>,std::allocator<Date>> &,const std::set<Date,std::less<Date>,std::allocator<Date>> &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xutility(4646,1): error C2893: Сбой при специализации функции-шаблона "unknown-type std::equal_to<void>::operator ()(_Ty1 &&,_Ty2 &&) noexcept(<expr>) const".
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xstddef(182): message : см. объявление "std::equal_to<void>::operator ()"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xutility(4646,1): message : Со следующими аргументами шаблона:
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xutility(4646,1): message : "_Ty1=const Date &"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\xutility(4646,1): message : "_Ty2=const Date &"
